@@ -2,7 +2,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import LoginForm from '../components/auth/LoginForm';
-
+import '../styles/AuthHTML.css';
 
 const LoginPage = () => {
     const [error, setError] = useState('');
