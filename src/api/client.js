@@ -21,6 +21,7 @@ api.interceptors.request.use(config => {
 
 
 export const register = (email, password) => {
+    console.log('api.register вызван с:', email, password);
     return api.post('/auth/register', {email , password});
 }
 

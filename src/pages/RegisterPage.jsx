@@ -10,6 +10,7 @@ const RegisterPage = () => {
     const navigate = useNavigate();
 
     const handleRegister = async (email, password) => {
+        console.log('📤 handleRegister вызван:', email, password);
         try {
             await Register(email, password);
             navigate('/login');
@@ -17,7 +18,7 @@ const RegisterPage = () => {
             setError(err.response?.data?.detail || 'Ошибка Регистрации');
         }
     };
-
+    console.log('📤 RegisterPage рендерится, handleRegister:', handleRegister);
     return (
     
             <div className="container">

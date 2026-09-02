@@ -3,11 +3,14 @@ import Button from '../ui/Button';
 import Input from '../ui/Input';
 
 const RegisterForm = ({ onSubmit, error }) => {
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+
         onSubmit(email, password);
     };
 

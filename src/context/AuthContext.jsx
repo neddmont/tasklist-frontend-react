@@ -26,8 +26,17 @@ export const AuthProvider = ({ children }) => {
     };
 
     const register = async (email, password) => {
-        const response = await apiRegister(email, password);
-        return response;
+        console.log('📤 AuthContext register вызван с:', email, password);
+
+        try {
+            const response = await apiRegister(email, password);
+            console.log('📤 AuthContext register успешен:', response);
+            return response;
+        } catch (error) {
+             console.error('❌ AuthContext.register ошибка:', error.response?.status, error.response?.data);
+            throw error;
+        }
+
     };
 
     const logout = () => {
