@@ -29,9 +29,9 @@ export const login = (email, password) => {
     formData.append('username', email);
     formData.append('password', password);
 
-    return api.post('/auth/login', formdata, {
+    return api.post('/auth/login', formData, {
         headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/json' ,
         },
     });
 };
