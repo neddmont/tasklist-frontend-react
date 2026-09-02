@@ -6,7 +6,7 @@ const API_URL = 'https://tasklist-backend-j30i.onrender.com';
 export const api = axios.create({
     baseURL: API_URL,
     headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
+        'Content-Type': 'application/json',
     },
 });
 
@@ -25,14 +25,10 @@ export const register = (email, password) => {
 }
 
 export const login = (email, password) => {
-    const formData = new URLSearchParams();
-    formData.append('username', email);
-    formData.append('password', password);
 
-    return api.post('/auth/login', formData, {
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-        },
+    return api.post('/auth/login', {
+        email: email,
+        password: password
     });
 };
 
