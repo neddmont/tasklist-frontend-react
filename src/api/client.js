@@ -31,7 +31,7 @@ export const login = (email, password) => {
 
     return api.post('/auth/login', formData, {
         headers: {
-            'Content-Type': 'application/json' ,
+            'Content-Type': 'application/x-www-form-urlencoded',
         },
     });
 };
