@@ -1,3 +1,5 @@
+import TaskItem from './TaskItem';
+
 const TaskList = ({ tasks, onToggle, onDelete }) => {
     if (tasks.length === 0) {
         return <p className="empty-message">Задач пока нет. Создайте первую! 🚀</p>;
