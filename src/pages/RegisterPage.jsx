@@ -6,13 +6,13 @@ import '../styles/AuthHTML.css';
 
 const RegisterPage = () => {
     const [error, setError] = useState('');
-    const { Register } = useAuth();
+    const { register } = useAuth();
     const navigate = useNavigate();
 
     const handleRegister = async (email, password) => {
         console.log('📤 handleRegister вызван:', email, password);
         try {
-            await Register(email, password);
+            await register(email, password);
             navigate('/login');
         } catch (err) {
             setError(err.response?.data?.detail || 'Ошибка Регистрации');
