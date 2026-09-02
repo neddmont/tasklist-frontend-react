@@ -7,7 +7,7 @@ import Modal from '../components/ui/Modal';
 import Button from '../components/ui/Button';
 import '../styles/dashboard.css'
 
-const dashboard = () => {
+const Dashboard = () => {
     const { user, logout } = useAuth();
     const [tasks, setTasks] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -106,4 +106,4 @@ const dashboard = () => {
     );
 };
 
-export default dashboard;
+export default Dashboard;

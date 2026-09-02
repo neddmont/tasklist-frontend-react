@@ -4,7 +4,7 @@ import { useAuth } from '../context/AuthContext';
 import LoginForm from '../components/auth/LoginForm';
 
 
-const loginPage = () => {
+const LoginPage = () => {
     const [error, setError] = useState('');
     const { login } = useAuth();
     const navigate = useNavigate();
@@ -27,4 +27,4 @@ const loginPage = () => {
     );
 };
 
-export default loginPage;
+export default LoginPage;

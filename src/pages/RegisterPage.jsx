@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import RegisterForm from '../components/auth/RegisterForm';
 
-const registerPage = () => {
+const RegisterPage = () => {
     const [error, setError] = useState('');
     const { Register } = useAuth();
     const navigate = useNavigate();
@@ -31,4 +31,4 @@ const registerPage = () => {
     );
 };
 
-export default registerPage;
+export default RegisterPage;
