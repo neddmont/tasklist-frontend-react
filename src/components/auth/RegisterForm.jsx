@@ -28,7 +28,7 @@ const RegisterForm = ({ onSubmit, error }) => {
                 required
             />
             {error && <p className="error">{error}</p>}
-            <Button type="Submit">Register</Button>
+            <Button type="submit">Register</Button>
         </form>
     );
 };
